@@ -5,7 +5,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "RenMichaela\\Vibrant\\": "src/"
+            "Vibrant\\": "src/"
         },
         "classmap": [
             "src/"

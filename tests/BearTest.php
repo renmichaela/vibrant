@@ -5,9 +5,9 @@ require_once __DIR__.'/TestsClient.php';
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
-use RenMichaela\Vibrant\Clients\Bear;
-use RenMichaela\Vibrant\Clients\Client;
-use RenMichaela\Vibrant\Random;
+use Vibrant\Clients\Bear;
+use Vibrant\Clients\Client;
+use Vibrant\Random;
 use Tests\TestInterface;
 use Tests\TestsClient;
 

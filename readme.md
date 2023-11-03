@@ -7,7 +7,7 @@ A collection of placeholder photo APIs in one convenient PHP package
 ### Usage
 
 ```php
-use RenMichaela\Vibrant\Random;
+use Vibrant\Random;
 
 // ...
 

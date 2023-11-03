@@ -1,14 +1,14 @@
 <?php
 
-namespace RenMichaela\Vibrant;
+namespace Vibrant;
 
-use RenMichaela\Vibrant\Clients\Bacon;
-use RenMichaela\Vibrant\Clients\Bear;
-use RenMichaela\Vibrant\Clients\Cat;
-use RenMichaela\Vibrant\Clients\Client;
-use RenMichaela\Vibrant\Clients\Coffee;
-use RenMichaela\Vibrant\Clients\Dog;
-use RenMichaela\Vibrant\Clients\Duck;
+use Vibrant\Clients\Bacon;
+use Vibrant\Clients\Bear;
+use Vibrant\Clients\Cat;
+use Vibrant\Clients\Client;
+use Vibrant\Clients\Coffee;
+use Vibrant\Clients\Dog;
+use Vibrant\Clients\Duck;
 
 class Random
 {
@@ -17,7 +17,7 @@ class Random
      *
      * @param width
      * @param height
-     * @return RenMichaela\Vibrant\Clients\Client
+     * @return Vibrant\Clients\Client
      */
     public static function bacon(int $width = 300, int $height = 200): Client
     {
@@ -29,7 +29,7 @@ class Random
      *
      * @param width
      * @param height
-     * @return RenMichaela\Vibrant\Clients\Client
+     * @return Vibrant\Clients\Client
      */
     public static function bear(int $width = 300, int $height = 200): Client
     {
@@ -39,7 +39,7 @@ class Random
     /**
      * Return a random picture of a cat from https://cataas.com
      *
-     * @return RenMichaela\Vibrant\Clients\Client
+     * @return Vibrant\Clients\Client
      */
     public static function cat(): Client
     {
@@ -49,7 +49,7 @@ class Random
     /**
      * Return a random picture of coffee from https://coffee.alexflipnote.dev
      *
-     * @return RenMichaela\Vibrant\Clients\Client
+     * @return Vibrant\Clients\Client
      */
     public static function coffee(): Client
     {
@@ -59,7 +59,7 @@ class Random
     /**
      * Return a random picture of a dog from https://dog.ceo/dog-api
      *
-     * @return RenMichaela\Vibrant\Clients\Client
+     * @return Vibrant\Clients\Client
      */
     public static function dog(): Client
     {
@@ -69,7 +69,7 @@ class Random
     /**
      * Return a random picture of a duck from https://random-d.uk/api
      *
-     * @return RenMichaela\Vibrant\Clients\Client
+     * @return Vibrant\Clients\Client
      */
     public static function duck(): Client
     {

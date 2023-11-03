@@ -17,6 +17,7 @@ trait TestsClient
         $class = end(explode('\\', get_class($this->client)));
 
         $this->assertStringContainsString('<img src', $html);
+        $this->assertStringContainsString($this->client->imageUrl(), $html);
         $this->assertStringContainsString('Random '.$class, $html);
     }
 }

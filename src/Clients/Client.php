@@ -1,6 +1,6 @@
 <?php
 
-namespace RenMichaela\Vibrant\Clients;
+namespace Vibrant\Clients;
 
 use GuzzleHttp\Client as HttpClient;
 
@@ -45,7 +45,7 @@ abstract class Client implements ClientInterface
         return $this->http;
     }
 
-    protected function imageUrl()
+    public function imageUrl()
     {
         return $this->dataUrl ?? $this->url;
     }

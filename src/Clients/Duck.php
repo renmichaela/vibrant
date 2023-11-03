@@ -1,6 +1,6 @@
 <?php
 
-namespace RenMichaela\Vibrant\Clients;
+namespace Vibrant\Clients;
 
 class Duck extends Client
 {
