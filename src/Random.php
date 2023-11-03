@@ -2,7 +2,7 @@
 
 namespace RenMichaela\Vibrant;
 
-use RenMichaela\Vibrant\Clients\{Bacon, Bear, Cat, Client, Coffee, Dog};
+use RenMichaela\Vibrant\Clients\{Bacon, Bear, Cat, Client, Coffee, Dog, Duck};
 
 class Random
 {
@@ -19,7 +19,7 @@ class Random
   }
 
   /**
-   * Return a random picture of bacon (meat) from https://baconmockup.com
+   * Return a random picture of a bear from https://placebear.com
    * 
    * @param width
    * @param height
@@ -51,12 +51,22 @@ class Random
   }
 
   /**
-   * Return a random picture of a dog from https://dog.ceo/dog-api/
+   * Return a random picture of a dog from https://dog.ceo/dog-api
    * 
    * @return RenMichaela\Vibrant\Clients\Client
    */
   public static function dog(): Client
   {
     return (new Dog)->fetch();
+  }
+
+  /**
+   * Return a random picture of a duck from https://random-d.uk/api
+   * 
+   * @return RenMichaela\Vibrant\Clients\Client
+   */
+  public static function duck(): Client
+  {
+    return (new Duck);
   }
 }
