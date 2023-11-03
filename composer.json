@@ -1,0 +1,21 @@
+{
+    "name": "renmichaela/vibrant",
+    "description": "A collection of placeholder photo APIs in one convenient PHP package",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "RenMichaela\\Vibrant\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "renmichaela",
+            "email": "ren.michaela@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "guzzlehttp/guzzle": "^7.8"
+    }
+}
