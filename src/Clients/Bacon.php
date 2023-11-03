@@ -2,8 +2,6 @@
 
 namespace RenMichaela\Vibrant\Clients;
 
-use GuzzleHttp\Client as HttpClient;
-
 class Bacon extends Client
 {
   private $width;
@@ -15,6 +13,6 @@ class Bacon extends Client
     $this->width = $width;
     $this->height = $height;  
 
-    $this->data = $this->baseUrl."/".$this->width."/".$this->height;
+    $this->url = $this->baseUrl."/".$this->width."/".$this->height;
   }
 }

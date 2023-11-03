@@ -6,7 +6,10 @@
     "autoload": {
         "psr-4": {
             "RenMichaela\\Vibrant\\": "src/"
-        }
+        },
+        "classmap": [
+            "src/"
+        ]
     },
     "authors": [
         {
@@ -17,5 +20,8 @@
     "minimum-stability": "stable",
     "require": {
         "guzzlehttp/guzzle": "^7.8"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.4"
     }
 }

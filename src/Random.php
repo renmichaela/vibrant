@@ -2,7 +2,7 @@
 
 namespace RenMichaela\Vibrant;
 
-use RenMichaela\Vibrant\Clients\{Bacon, Client, Coffee};
+use RenMichaela\Vibrant\Clients\{Bacon, Cat, Client, Coffee};
 
 class Random
 {
@@ -11,8 +11,13 @@ class Random
     return new Bacon($width, $height);
   }
 
+  public static function cat(): Client
+  {
+    return (new Cat);
+  }
+
   public static function coffee(): Client
   {
-    return (new Coffee)->fetch();
+    return (new Coffee);
   }
 }

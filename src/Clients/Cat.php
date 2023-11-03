@@ -2,10 +2,10 @@
 
 namespace RenMichaela\Vibrant\Clients;
 
-class Coffee extends Client
+class Cat extends Client
 {
   public function __construct()
   {
-    $this->url = 'https://coffee.alexflipnote.dev/random';  
+    $this->url = "https://cataas.com/cat";
   }
 }
