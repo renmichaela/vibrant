@@ -6,9 +6,13 @@ use GuzzleHttp\Client as HttpClient;
 
 abstract class Client implements ClientInterface
 {
+  protected $baseUrl;
   protected $data;
 
-  abstract protected function http(): HttpClient;
+  protected function http(): HttpClient
+  {
+    return new HttpClient(['base_uri' => $this->baseUrl]);
+  }
 
   public function asHtml()
   {
@@ -24,13 +28,12 @@ abstract class Client implements ClientInterface
 
   public function asResponse()
   {
-    $img = end(explode("/", $this->data));
-    $response = $this->http()->get("/".$img);
+    $response = $this->http()->get($this->data);
     $imgData = $response->getBody()->getContents();
     
     header("Content-Type: ".$response->getHeader("Content-Type")[0]);
     header("Content-Length: ".$response->getHeader('Content-Length')[0]);
 
-    return $imgData;
+    echo $imgData;
   }
 }
