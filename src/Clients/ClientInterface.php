@@ -4,9 +4,9 @@ namespace RenMichaela\Vibrant\Clients;
 
 interface ClientInterface
 {
-  public function asHtml();
-  
-  public function asString();
+    public function asHtml();
 
-  public function asResponse();
+    public function asString();
+
+    public function asResponse();
 }
