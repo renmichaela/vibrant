@@ -2,7 +2,7 @@
 
 namespace RenMichaela\Vibrant;
 
-use RenMichaela\Vibrant\Clients\{Bacon, Cat, Client, Coffee, Dog};
+use RenMichaela\Vibrant\Clients\{Bacon, Bear, Cat, Client, Coffee, Dog};
 
 class Random
 {
@@ -16,6 +16,18 @@ class Random
   public static function bacon(int $width = 300, int $height = 200): Client
   {
     return new Bacon($width, $height);
+  }
+
+  /**
+   * Return a random picture of bacon (meat) from https://baconmockup.com
+   * 
+   * @param width
+   * @param height
+   * @return RenMichaela\Vibrant\Clients\Client
+   */
+  public static function bear(int $width = 300, int $height = 200): Client
+  {
+    return new Bear($width, $height);
   }
 
   /**

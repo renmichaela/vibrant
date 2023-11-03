@@ -7,12 +7,12 @@ use RenMichaela\Vibrant\Random;
 use RenMichaela\Vibrant\Clients\Client;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
-use RenMichaela\Vibrant\Clients\Coffee;
+use RenMichaela\Vibrant\Clients\Bear;
 use Tests\TestInterface;
 use Tests\TestsClient;
 
-#[CoversClass(Coffee::class)]
-final class CoffeeTest extends TestCase implements TestInterface
+#[CoversClass(Bear::class)]
+final class BearTest extends TestCase implements TestInterface
 {
   use TestsClient;
 
@@ -20,7 +20,7 @@ final class CoffeeTest extends TestCase implements TestInterface
 
   public function setUp(): void
   {
-    $this->client = Random::coffee();
+    $this->client = Random::bear();
 
     $this->assertTrue($this->client instanceof Client);
     
