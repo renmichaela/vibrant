@@ -9,4 +9,8 @@ interface ClientInterface
     public function asString();
 
     public function asResponse();
+
+    public function imageContent();
+
+    public function imageUrl();
 }

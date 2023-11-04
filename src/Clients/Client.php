@@ -3,6 +3,9 @@
 namespace Vibrant\Clients;
 
 use GuzzleHttp\Client as HttpClient;
+use Vibrant\Formatters\AsHtml;
+use Vibrant\Formatters\AsResponse;
+use Vibrant\Formatters\AsString;
 
 abstract class Client implements ClientInterface
 {
@@ -14,26 +17,17 @@ abstract class Client implements ClientInterface
 
     public function asHtml()
     {
-        $classArray = explode('\\', get_called_class());
-        $class = end($classArray);
-
-        return "<img src='".$this->imageUrl()."' alt='Random ".$class."' />";
+        return (new AsHtml($this))->format();
     }
 
     public function asString()
     {
-        return $this->imageUrl();
+        return (new AsString($this))->format();
     }
 
     public function asResponse()
     {
-        $response = $this->http()->get($this->imageUrl());
-        $imgData = $response->getBody()->getContents();
-
-        header('Content-Type: '.$response->getHeader('Content-Type')[0]);
-        header('Content-Length: '.$response->getHeader('Content-Length')[0]);
-
-        echo $imgData;
+        return (new AsResponse($this))->format();
     }
 
     protected function http()
@@ -43,6 +37,14 @@ abstract class Client implements ClientInterface
         }
 
         return $this->http;
+    }
+
+    public function imageContent()
+    {
+        $response = $this->http()->get($this->imageUrl());
+        $imgData = $response->getBody()->getContents();
+
+        return [$response, $imgData];
     }
 
     public function imageUrl()
