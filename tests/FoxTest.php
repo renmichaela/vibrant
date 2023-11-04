@@ -5,11 +5,11 @@ require_once __DIR__.'/TestsClient.php';
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
-use Vibrant\Clients\Fox;
-use Vibrant\Clients\Client;
-use Vibrant\Random;
 use Tests\TestInterface;
 use Tests\TestsClient;
+use Vibrant\Clients\Client;
+use Vibrant\Clients\Fox;
+use Vibrant\Random;
 
 #[CoversClass(Fox::class)]
 final class FoxTest extends TestCase implements TestInterface

@@ -3,9 +3,7 @@
 namespace Vibrant\Clients;
 
 use GuzzleHttp\Client as HttpClient;
-use Vibrant\Formatters\AsHtml;
-use Vibrant\Formatters\AsResponse;
-use Vibrant\Formatters\AsString;
+use Vibrant\Formatters\FormatterInterface;
 
 abstract class Client implements ClientInterface
 {
@@ -15,19 +13,9 @@ abstract class Client implements ClientInterface
 
     protected $http;
 
-    public function asHtml()
+    public function format(FormatterInterface $formatter)
     {
-        return (new AsHtml($this))->format();
-    }
-
-    public function asString()
-    {
-        return (new AsString($this))->format();
-    }
-
-    public function asResponse()
-    {
-        return (new AsResponse($this))->format();
+        return $formatter->output($this);
     }
 
     protected function http()

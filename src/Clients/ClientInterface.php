@@ -2,13 +2,11 @@
 
 namespace Vibrant\Clients;
 
+use Vibrant\Formatters\FormatterInterface;
+
 interface ClientInterface
 {
-    public function asHtml();
-
-    public function asString();
-
-    public function asResponse();
+    public function format(FormatterInterface $formatter);
 
     public function imageContent();
 

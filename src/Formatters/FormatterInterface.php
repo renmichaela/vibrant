@@ -2,7 +2,9 @@
 
 namespace Vibrant\Formatters;
 
+use Vibrant\Clients\ClientInterface;
+
 interface FormatterInterface
 {
-  public function format();
+    public function output(ClientInterface $client);
 }

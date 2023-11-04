@@ -5,11 +5,11 @@ require_once __DIR__.'/TestsClient.php';
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
+use Tests\TestInterface;
+use Tests\TestsClient;
 use Vibrant\Clients\Bear;
 use Vibrant\Clients\Client;
 use Vibrant\Random;
-use Tests\TestInterface;
-use Tests\TestsClient;
 
 #[CoversClass(Bear::class)]
 final class BearTest extends TestCase implements TestInterface
