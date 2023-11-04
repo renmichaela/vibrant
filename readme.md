@@ -8,12 +8,15 @@ A collection of placeholder photo APIs in one convenient PHP package
 
 ```php
 use Vibrant\Random;
+use Vibrant\Formatters\StringFormat;
+use Vibrant\Formatters\HtmlFormat;
+use Vibrant\Formatters\ResponseFormat;
 
 // ...
 
-Random::{method}()->asString(); # https://[apisource]
-Random::{method}()->asHtml(); # <img src="https://[apisource]" alt="Random [Class]" />
-Random::{method}()->asResponse(); # Sets headers and echos image content
+Random::{method}()->format(new StringFormat); # https://[apisource]
+Random::{method}()->format(new HtmlFormat); # <img src="https://[apisource]" alt="Random [Class]" />
+Random::{method}()->format(new ResponseFormat); # Sets headers and echos image content
 ```
 
 | Method | Source | Parameters |
