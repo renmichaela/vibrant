@@ -27,3 +27,4 @@ Random::{method}()->format(new ResponseFormat); # Sets headers and echos image c
 | `coffee()` | https://coffee.alexflipnote.dev | none |
 | `dog()` | https://dog.ceo/dog-api | none |
 | `duck()` | https://random-d.uk/api | none |
+| `fox()` | https://randomfox.ca/floof | none |

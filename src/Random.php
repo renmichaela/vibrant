@@ -78,7 +78,7 @@ class Random
     }
 
     /**
-     * Return a random picture of a fox from https://randomfox.ca/floof/
+     * Return a random picture of a fox from https://randomfox.ca/floof
      *
      * @return Vibrant\Clients\ClientInterface
      */
